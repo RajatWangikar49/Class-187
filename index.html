@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta name = "viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+
+  <script src = "https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src = "https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+ 
+  <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; 
+  sourceWidth:1280; sourceHeight:960; 
+  displayWidth: 1280; displayHeight: 960; 
+  debugUIEnabled: false;" gesture-detector create-buttons>
+
+    <a-assets>
+
+      <img id = "png1" src = "./VR-AR-ProjectCards/1.png" />
+      <img id = "png2" src = "./VR-AR-ProjectCards/2.png" />
+      <img id = "png3" src = "./VR-AR-ProjectCards/3.png" />
+      <img id = "png4" src = "./VR-AR-ProjectCards/4.png" />
+      <img id = "png5" src = "./VR-AR-ProjectCards/5.png" />
+      <img id = "png6" src = "./VR-AR-ProjectCards/6.png" />
+
+    </a-assets>
+
+    <a-marker id = "pattern_icon1" type = "pattern" url = "pattern_markers/pattern_icon1/pattern-icon-01.patt">
+      <a-plane src="#png1" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+    <a-marker id = "pattern_icon2" type = "pattern" url = "pattern_markers/pattern_icon2/pattern-icon-02.patt">
+      <a-plane src="#png2" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+    <a-marker id = "pattern_icon3" type = "pattern" url = "pattern_markers/pattern_icon3/pattern-icon-03.patt">
+      <a-plane src="#png3" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+    <a-marker id = "pattern_icon4" type = "pattern" url = "pattern_markers/pattern_icon4/pattern-icon-04.patt">
+      <a-plane src="#png4" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+    <a-marker id = "pattern_icon5" type = "pattern" url = "pattern_markers/pattern_icon5/pattern-icon-05.patt">
+      <a-plane src="#png5" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+    <a-marker id = "pattern_icon6" type = "pattern" url = "pattern_markers/pattern_icon6/pattern-icon-06.patt">
+      <a-plane src="#png6" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+  </a-scene>
+ 
+</body>
+
+</html>
